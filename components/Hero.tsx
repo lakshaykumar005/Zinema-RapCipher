@@ -1,0 +1,77 @@
+import Image from "next/image";
+import { IMAGES } from "@/lib/images";
+import Magnetic from "./Magnetic";
+import Equalizer from "./Equalizer";
+
+export default function Hero() {
+  return (
+    <section id="top" className="relative min-h-[100svh] flex flex-col overflow-hidden">
+      {/* Cinematic letterbox bars */}
+      <div className="pointer-events-none absolute top-0 inset-x-0 h-[7vh] bg-ink z-30" />
+      <div className="pointer-events-none absolute bottom-0 inset-x-0 h-[7vh] bg-ink z-30" />
+
+      {/* Background */}
+      <div className="absolute inset-0 overflow-hidden">
+        <Image src={IMAGES.stageLights} alt="Performer under the spotlight at a live show" fill priority className="object-cover object-center kenburns" />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(7,6,10,.78) 0%, rgba(7,6,10,.45) 38%, rgba(7,6,10,.82) 80%, var(--color-ink) 100%)" }} />
+        <div className="absolute inset-0 mix-blend-overlay" style={{ background: "radial-gradient(110% 70% at 82% 8%, rgba(255,90,31,.42), transparent 58%)" }} />
+      </div>
+      <div className="glow" style={{ width: 560, height: 560, background: "var(--color-ember)", top: -140, right: -90 }} />
+
+      {/* Top meta */}
+      <div className="relative z-20 mx-auto max-w-7xl w-full px-5 sm:px-8 pt-[10vh]">
+        <div className="flex flex-wrap items-center justify-between gap-4">
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+            <span className="label shimmer">Chennai · India</span>
+            <span className="h-[7px] w-[7px] rounded-full live-dot" style={{ background: "var(--color-ember)" }} />
+            <span className="label">Open Cypher &amp; Live Jam</span>
+          </div>
+          {/* Subtle Zinema presence */}
+          <div className="hidden sm:flex items-center gap-2.5 rounded-full px-3.5 py-1.5 float-slow" style={{ border: "1px solid var(--color-line)", background: "rgba(7,6,10,.4)", backdropFilter: "blur(8px)" }}>
+            <span className="h-7 flex items-center"><Equalizer bars={5} className="!gap-[2px] h-4" /></span>
+            <span className="font-grotesk text-[0.66rem] tracking-[0.2em] uppercase text-bone-dim">
+              An event by <span className="text-bone font-semibold">Zinema&nbsp;Music</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      {/* Headline */}
+      <div className="relative z-20 mx-auto max-w-7xl w-full px-5 sm:px-8 mt-auto pb-[3vh]">
+        <h1 className="font-display">
+          <span className="block text-[19vw] sm:text-[16vw] lg:text-[15rem] leading-[0.92]">RAP</span>
+          <span className="block text-[19vw] sm:text-[16vw] lg:text-[15rem] leading-[0.92] gradient-ember glow-ember">
+            CIPHER
+          </span>
+        </h1>
+
+        <div className="mt-8 grid gap-10 lg:grid-cols-[1.25fr_1fr] lg:items-end">
+          <p className="max-w-xl text-bone-dim text-base sm:text-lg leading-relaxed">
+            The underground convenes. One circle. One mic. Chennai&apos;s sharpest rappers,
+            beatboxers and producers — trading bars, building beats, jamming live until the city
+            listens.
+          </p>
+
+          <div className="flex flex-col gap-5">
+            <div className="flex items-center gap-4">
+              <span className="font-display text-3xl ember-text">DATE</span>
+              <span className="font-grotesk text-sm uppercase tracking-[0.2em] px-3 py-2 rounded-sm" style={{ border: "1px solid var(--color-line)" }}>
+                Yet to be announced
+              </span>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Magnetic><a href="#register" className="btn btn-primary">Register as Artist</a></Magnetic>
+              <Magnetic><a href="#about" className="btn btn-ghost">What&apos;s a Cipher?</a></Magnetic>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Live equalizer footer */}
+      <div className="relative z-20 mx-auto max-w-7xl w-full px-5 sm:px-8 pb-[9vh] flex items-end justify-between gap-6">
+        <span className="label hidden sm:block">Scroll to enter the circle</span>
+        <div className="h-9 w-40 sm:w-56 opacity-80"><Equalizer bars={32} /></div>
+      </div>
+    </section>
+  );
+}
