@@ -6,7 +6,7 @@ import Equalizer from "./Equalizer";
 
 export default function Bento() {
   return (
-    <section id="experience" className="relative py-24 sm:py-32 border-t border-[var(--color-line)]">
+    <section id="experience" className="relative py-24 sm:py-32 border-t border-[var(--color-line)] overflow-hidden">
       <div className="glow" style={{ width: 460, height: 460, background: "var(--color-ember)", bottom: -160, left: -120, opacity: 0.22 }} />
       <div className="mx-auto max-w-7xl px-5 sm:px-8 relative">
         <Reveal>
@@ -27,7 +27,7 @@ export default function Bento() {
         </Reveal>
 
         {/* Bento grid */}
-        <div className="mt-14 grid grid-cols-1 sm:grid-cols-6 auto-rows-[200px] gap-4">
+        <div className="mt-14 grid grid-cols-1 sm:grid-cols-6 auto-rows-[minmax(190px,auto)] sm:auto-rows-[200px] gap-4">
           {/* Big feature with image */}
           <Reveal className="sm:col-span-4 sm:row-span-2">
             <SpotlightCard className="h-full grad-border zoom-parent">

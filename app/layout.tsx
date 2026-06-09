@@ -22,11 +22,12 @@ const grotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "RAP CIPHER · Chennai — The Underground Convenes",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
+  title: "RAP CYPHER · Chennai — The Underground Convenes",
   description:
-    "RAP CIPHER Chennai — an open-mic cypher & live jam where the city's rappers, beatboxers and producers converge. Presented in association with Zinema Music. Registrations open. Date: yet to be announced.",
+    "RAP CYPHER Chennai — an open-mic cypher & live jam where the city's rappers, beatboxers and producers converge. Presented in association with Zinema Music. Registrations open. Date: yet to be announced.",
   keywords: [
-    "rap cipher chennai",
+    "rap cypher chennai",
     "rap event chennai",
     "zinema music",
     "hip hop chennai",
@@ -34,10 +35,26 @@ export const metadata: Metadata = {
     "cypher",
   ],
   openGraph: {
-    title: "RAP CIPHER · Chennai",
+    title: "RAP CYPHER · Chennai",
     description:
       "The underground convenes. An open cypher & live jam for Chennai's rappers. Presented in association with Zinema Music.",
     type: "website",
+    siteName: "RAP CYPHER · Chennai",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "RAP CYPHER · Chennai — presented by Zinema Music",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "RAP CYPHER · Chennai",
+    description:
+      "An open cypher & live jam for Chennai's rappers. Presented by Zinema Music.",
+    images: ["/og.png"],
   },
 };
 

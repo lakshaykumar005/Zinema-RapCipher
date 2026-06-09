@@ -32,7 +32,7 @@ export default function About() {
 
           <div>
             <Reveal>
-              <span className="label">What is a cipher?</span>
+              <span className="label">What is a cypher?</span>
               <h2 className="font-display text-5xl sm:text-7xl mt-4 leading-[0.9]">
                 A circle where
                 <br />
@@ -48,7 +48,7 @@ export default function About() {
             </Reveal>
             <Reveal delay={200}>
               <p className="mt-5 text-bone-dim leading-relaxed text-base sm:text-lg">
-                RAP CIPHER brings that circle to Chennai at full scale — a curated stage where rappers
+                RAP CYPHER brings that circle to Chennai at full scale — a curated stage where rappers
                 come to <span className="text-bone">jam together</span>, trade verses, and{" "}
                 <span className="text-bone">show their talent</span> for a crowd that came for exactly
                 this.

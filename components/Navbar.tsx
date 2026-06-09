@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Magnetic from "./Magnetic";
 
 const LINKS = [
-  { label: "The Cipher", href: "#about" },
+  { label: "The Cypher", href: "#about" },
   { label: "Experience", href: "#experience" },
   { label: "Night", href: "#timeline" },
   { label: "FAQ", href: "#faq" },
@@ -31,10 +31,15 @@ export default function Navbar() {
       }}
     >
       <nav className="mx-auto max-w-7xl px-5 sm:px-8 h-[72px] flex items-center justify-between">
-        <a href="#top" className="flex items-center gap-3">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-sm font-display text-lg" style={{ background: "var(--color-ember)", color: "#0a0708" }}>R</span>
+        <a href="#top" className="flex items-center gap-3 group">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo/rap-cypher-emblem.svg?v=2"
+            alt="Rap Cypher"
+            className="h-10 w-10 transition-transform duration-500 group-hover:rotate-90"
+          />
           <span className="font-grotesk tracking-[0.28em] text-xs font-semibold uppercase">
-            Rap&nbsp;Cipher<span className="ember-text"> · </span>CHN
+            Rap&nbsp;Cypher<span className="ember-text"> · </span>CHN
           </span>
         </a>
 

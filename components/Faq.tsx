@@ -22,7 +22,7 @@ const QA = [
   },
   {
     q: "What's Zinema Music's role?",
-    a: "RAP CIPHER is presented in association with Zinema Music as our associate producer — backing the production, sound and stage so the night is done right.",
+    a: "RAP CYPHER is presented in association with Zinema Music as our associate producer — backing the production, sound and stage so the night is done right.",
   },
   {
     q: "What happens after I register?",

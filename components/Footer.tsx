@@ -10,14 +10,14 @@ export default function Footer() {
         <div className="text-center">
           <span className="label">Chennai · Season 01</span>
           <h2
-            className="font-display text-[20vw] sm:text-[14rem] leading-[0.8] mt-4 text-image glow-ember select-none"
+            className="font-display text-[20vw] lg:text-[13rem] leading-[0.8] mt-4 text-image glow-ember select-none"
             style={{
               backgroundImage: `linear-gradient(120deg, rgba(255,90,31,0.42) 0%, rgba(255,122,66,0.28) 45%, rgba(240,194,75,0.4) 100%), url(${IMAGES.concertWide})`,
               backgroundSize: "cover",
               backgroundPosition: "center 38%",
             }}
           >
-            CIPHER
+            CYPHER
           </h2>
         </div>
 
@@ -33,7 +33,7 @@ export default function Footer() {
           <div>
             <div className="font-grotesk uppercase tracking-[0.2em] text-xs text-bone-dim">Explore</div>
             <ul className="mt-4 space-y-2.5 text-sm">
-              {[["The Cipher", "#about"], ["Experience", "#experience"], ["The Night", "#timeline"], ["Register", "#register"]].map(([t, h]) => (
+              {[["The Cypher", "#about"], ["Experience", "#experience"], ["The Night", "#timeline"], ["Register", "#register"]].map(([t, h]) => (
                 <li key={h}><a href={h} className="link-underline text-bone-dim hover:text-bone transition-colors">{t}</a></li>
               ))}
             </ul>
@@ -44,18 +44,20 @@ export default function Footer() {
             <a href={`mailto:${ZINEMA.email}`} className="link-underline inline-block mt-4 text-sm text-bone-dim hover:text-bone transition-colors">{ZINEMA.email}</a>
           </div>
           <div>
-            <div className="font-grotesk uppercase tracking-[0.2em] text-xs text-bone-dim">Presented by Zinema</div>
+            <div className="font-grotesk uppercase tracking-[0.2em] text-xs text-bone-dim">Presented by</div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo/zinema-logo.png?v=3" alt="Zinema Music" className="h-11 w-auto mt-3" />
             <p className="mt-4 text-bone-dim text-sm leading-relaxed max-w-xs">
               <span className="text-bone">Cinema Scale. Community Soul.</span> We don&apos;t wait for
               labels. We press records.
             </p>
-            <a href="mailto:hello@rapcipher.in" className="inline-block mt-4 text-sm text-bone-dim hover:text-bone transition-colors">hello@rapcipher.in</a>
+            <a href="mailto:hello@rapcypher.in" className="inline-block mt-4 text-sm text-bone-dim hover:text-bone transition-colors">hello@rapcypher.in</a>
           </div>
         </div>
 
         <div className="noise-divider mt-14" />
         <div className="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span className="text-xs text-bone-dim">© 2026 RAP CIPHER. All rights reserved.</span>
+          <span className="text-xs text-bone-dim">© 2026 RAP CYPHER. All rights reserved.</span>
           <span className="text-xs text-bone-dim">
             A <span className="ember-text">Zinema Music</span> production · Date — yet to be announced
           </span>

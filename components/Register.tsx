@@ -93,7 +93,7 @@ export default function Register() {
   }
 
   return (
-    <section id="register" className="relative py-24 sm:py-32 border-t border-[var(--color-line)]">
+    <section id="register" className="relative py-24 sm:py-32 border-t border-[var(--color-line)] overflow-hidden">
       <div className="glow" style={{ width: 500, height: 500, background: "var(--color-ember)", top: 40, right: -160, opacity: 0.2 }} />
       <div className="mx-auto max-w-4xl px-5 sm:px-8 relative">
         <Reveal>
@@ -178,7 +178,7 @@ export default function Register() {
 
               <div className="mt-6">
                 <label className="field-label">Tell us about your sound *</label>
-                <textarea name="bio" required className="field" placeholder="Who are you as an artist? Why should you be in the cipher?" />
+                <textarea name="bio" required className="field" placeholder="Who are you as an artist? Why should you be in the cypher?" />
               </div>
 
               {/* WAV upload */}
@@ -223,7 +223,7 @@ export default function Register() {
               <label className="mt-6 flex items-start gap-3 cursor-pointer">
                 <input type="checkbox" name="consent" required className="mt-1 accent-[var(--color-ember)] h-4 w-4" />
                 <span className="text-sm text-bone-dim leading-relaxed">
-                  I confirm these details are mine and I&apos;m okay with the RAP CIPHER / Zinema Music
+                  I confirm these details are mine and I&apos;m okay with the RAP CYPHER / Zinema Music
                   team contacting me about the event. *
                 </span>
               </label>

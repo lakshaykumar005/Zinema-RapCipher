@@ -23,6 +23,7 @@
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
 }
 
 body {
@@ -30,8 +31,12 @@ body {
   background-color: var(--color-ink);
   color: var(--color-bone);
   font-family: var(--font-body);
-  overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100vw;
 }
+
+/* Any decorative glow/aurora must never widen the page */
+.glow, .aurora { max-width: 100vw; }
 
 ::selection { background: var(--color-ember); color: #08070a; }
 

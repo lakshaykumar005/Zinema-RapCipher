@@ -44,7 +44,7 @@ export default function PresentedBy() {
 
             <Reveal delay={200}>
               <p className="mt-7 max-w-xl leading-relaxed opacity-70">
-                RAP CIPHER is a Zinema Music production — a global artist community putting its weight,
+                RAP CYPHER is a Zinema Music production — a global artist community putting its weight,
                 its stage and its sound behind Chennai&apos;s next wave. When Zinema presses play, the
                 culture moves.
               </p>
