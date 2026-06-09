@@ -40,7 +40,14 @@ export default function Hero() {
       <div className="relative z-20 mx-auto max-w-7xl w-full px-5 sm:px-8 mt-auto pb-[3vh]">
         <h1 className="font-display">
           <span className="block text-[19vw] sm:text-[16vw] lg:text-[15rem] leading-[0.92]">RAP</span>
-          <span className="block text-[19vw] sm:text-[16vw] lg:text-[15rem] leading-[0.92] gradient-ember glow-ember">
+          <span
+            className="block text-[19vw] sm:text-[16vw] lg:text-[15rem] leading-[0.92] text-image glow-ember"
+            style={{
+              backgroundImage: `linear-gradient(120deg, rgba(255,90,31,0.4) 0%, rgba(255,122,66,0.26) 45%, rgba(240,194,75,0.38) 100%), url(${IMAGES.djSet})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center 35%",
+            }}
+          >
             CIPHER
           </span>
         </h1>

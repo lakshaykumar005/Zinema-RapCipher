@@ -49,6 +49,14 @@ export default function Register() {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (fileErr) return;
+    // The clip is required, but its input is hidden — validate it here so the
+    // form can't silently fail to submit (and show a clear message instead).
+    const chosen = fileInput.current?.files?.[0];
+    if (!chosen) {
+      setFileErr("Please attach your clip (.wav) before submitting.");
+      fileInput.current?.closest(".dropzone")?.scrollIntoView({ behavior: "smooth", block: "center" });
+      return;
+    }
     setStatus("submitting"); setErrorMsg("");
     const form = e.currentTarget;
     const data = new FormData(form);
@@ -187,7 +195,7 @@ export default function Register() {
                   onDragLeave={() => setDrag(false)}
                   onDrop={onDrop}
                 >
-                  <input ref={fileInput} type="file" name="clip" accept=".wav,audio/wav,audio/x-wav,audio/wave" required className="hidden" onChange={(e) => validateFile(e.target.files?.[0])} />
+                  <input ref={fileInput} type="file" name="clip" accept=".wav,audio/wav,audio/x-wav,audio/wave" className="hidden" onChange={(e) => validateFile(e.target.files?.[0])} />
                   {fileName ? (
                     <div className="flex flex-col items-center gap-3">
                       <div className="h-8 w-44"><Equalizer bars={28} /></div>
